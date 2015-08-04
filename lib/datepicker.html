@@ -1,0 +1,14 @@
+<template name="afImpactDate">
+  {{#if isMobile}}
+    <input type="date" value="{{value}}" {{atts}}/>
+  {{else}}
+    <input type="text" value="{{formattedDate}}" data-value="{{value}}" {{atts}}/>
+    {{> ImpactDate calendar=calendar options=options}}
+  {{/if}}
+</template>
+
+<template name="afImpactDate_bootstrap3">
+  {{#with context}}
+    {{> afImpactDate}}
+  {{/with}}
+</template>
